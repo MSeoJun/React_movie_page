@@ -13,3 +13,10 @@ export const getDetail = async (movieID) => {
     .then((res) => res.data.data.movie);
   return Details;
 };
+
+export const example = async () => {
+  const exm = await axios
+    .get(`http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json`)
+    .then((res) => res.data.data.movies)
+  return exm
+}
